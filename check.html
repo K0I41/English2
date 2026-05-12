@@ -6,7 +6,7 @@
 </head>
 <body>
   <h1>質問に答えると健康状態を評価します</h1>
-  <form action="#" method="post">
+  <form action="#" method="post" id="healthForm">
   <p>質問1<br>今日の睡眠時間は？</p>
     <input type="radio" name="sleep" value="1">寝ていない
     <input type="radio" name="sleep" value="2">3時間以下
@@ -64,13 +64,14 @@
     </p>
 
     <p>
-    <button type="button" onclick="location.href='result.html'">
+    <button type="submit" onclick="location.href='result.html'">
     健康状態を確認する
   </button>
   </p>
  </form>
 
  <p id="result"></p>
-  
+
+<script src="calc.js"></script>
 </body>
 </html>
