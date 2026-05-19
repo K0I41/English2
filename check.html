@@ -6,14 +6,13 @@
 </head>
 <body>
   <h1>質問に答えると健康状態を評価します</h1>
-  <form action="#" method="post">
+  <form action="#" method="post" id="healthForm">
   <p>質問1<br>今日の睡眠時間は？</p>
     <input type="radio" name="sleep" value="1">寝ていない
     <input type="radio" name="sleep" value="2">3時間以下
     <input type="radio" name="sleep" value="3">6時間以下
     <input type="radio" name="sleep" value="4">6~8時間
     <input type="radio" name="sleep" value="5">8時間以上
-  </p>
 
   <p>質問2<br>今日の運動時間は？</p>
     <input type="radio" name="exercise" value="1">家から出ていない
@@ -21,7 +20,6 @@
     <input type="radio" name="exercise" value="3">軽く走った
     <input type="radio" name="exercise" value="4">しっかりした
     <input type="radio" name="exercise" value="5">かなりした
-  </p>
 
   <p>質問3<br>今日の食事はどうでしたか？</p>
     <input type="radio" name="meal" value="1">ほとんど食べていない
@@ -29,7 +27,6 @@
     <input type="radio" name="meal" value="3">2食
     <input type="radio" name="meal" value="4">3食だがバランス悪い
     <input type="radio" name="meal" value="5">3食バランス良く
-  </p>
 
   <p>質問4<br>今日の体調は？</p>
     <input type="radio" name="condition" value="1">とても悪い
@@ -37,7 +34,6 @@
     <input type="radio" name="condition" value="3">普通
     <input type="radio" name="condition" value="4">良い
     <input type="radio" name="condition" value="5">とても良い
-  </p>
 
   <p>質問5<br>今日の気分はどうでしたか？</p>
     <input type="radio" name="mood" value="1">とても悪い
@@ -45,7 +41,6 @@
     <input type="radio" name="mood" value="3">普通
     <input type="radio" name="mood" value="4">良い
     <input type="radio" name="mood" value="5">とても良い
-  </p>
 
   <p>質問6<br>今日は規則正しい生活ができましたか？</p>
     <input type="radio" name="routine" value="1">全くできていない
@@ -53,7 +48,7 @@
     <input type="radio" name="routine" value="3">普通
     <input type="radio" name="routine" value="4">だいたいできた
     <input type="radio" name="routine" value="5">しっかりできた
-  </p>
+
 
   <p>質問7<br>今日は集中して作業できましたか？</p>
     <input type="radio" name="focus" value="1">全くできていない
@@ -61,14 +56,16 @@
     <input type="radio" name="focus" value="3">普通
     <input type="radio" name="focus" value="4">だいたいできた
     <input type="radio" name="focus" value="5">しっかりできた
-    </p>
 
     <p>
-    <input type="submit" value="今日の健康状態">
+    <button type="button" onclick="saveHealthCheck()">
+  健康状態を確認する
+</button>
   </p>
- </form>
+  </form>
 
- <p id="result"></p>
-  
+  <p id="result"></p>
+
+<script src="calc.js"></script>
 </body>
 </html>
