@@ -2,20 +2,24 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>健康チェックアプリ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>今日の健康状態</h1>
-  <h2 id="resultMessage">
-    ここに健康チェックの結果を表示します
-  </h2>
+<body class="app-page result-page">
+  <main class="result-panel">
+    <h1>今日の健康状態</h1>
+    <h2 id="resultMessage">
+      AIによる今日の健康チェック結果
+    </h2>
 
-  <p id="resultScore"></p>
-  <p id="resultAdvice"></p>
+    <p id="resultScore"></p>
+    <p id="resultAdvice"></p>
 
-  <button onclick="location.href='front.html'">
-    タイトルに戻る
-  </button>
+    <button onclick="location.href='front.html'">
+      タイトルに戻る
+    </button>
+  </main>
 
   <script src="calc.js"></script>
 </body>
