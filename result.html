@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>健康チェックアプリ</title>
   <meta charset="UTF-8">
+  <title>健康チェックアプリ</title>
 </head>
 <body>
   <h1>今日の健康状態</h1>
   <h2 id="resultMessage">
-  ここに健康チェックの総評を出力する
-</h2>
+    ここに健康チェックの結果を表示します
+  </h2>
 
-<p id="resultScore"></p>
+  <p id="resultScore"></p>
+  <p id="resultAdvice"></p>
+
   <button onclick="location.href='front.html'">
     タイトルに戻る
   </button>
+
   <script src="calc.js"></script>
 </body>
 </html>
