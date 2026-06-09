@@ -1,68 +1,68 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>健康チェックアプリ</title>
+  <title>Health Check App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="app-page check-page">
   <main class="check-layout">
-    <h1>質問に答えるとAIが今日の健康状態を評価します</h1>
+    <h1>Answer the questions and AI will review your health condition today</h1>
 
     <form action="#" method="post" id="healthForm">
-      <p>質問1<br>今日の睡眠時間は？</p>
-      <label><input type="radio" name="sleep" value="1" required>寝ていない</label>
-      <label><input type="radio" name="sleep" value="2">3時間以下</label>
-      <label><input type="radio" name="sleep" value="3">6時間以下</label>
-      <label><input type="radio" name="sleep" value="4">6~8時間</label>
-      <label><input type="radio" name="sleep" value="5">8時間以上</label>
+      <p>Question 1<br>How long did you sleep today?</p>
+      <label><input type="radio" name="sleep" value="1" required>No sleep</label>
+      <label><input type="radio" name="sleep" value="2">3 hours or less</label>
+      <label><input type="radio" name="sleep" value="3">6 hours or less</label>
+      <label><input type="radio" name="sleep" value="4">6 to 8 hours</label>
+      <label><input type="radio" name="sleep" value="5">8 hours or more</label>
 
-      <p>質問2<br>今日の運動時間は？</p>
-      <label><input type="radio" name="exercise" value="1" required>家から出ていない</label>
-      <label><input type="radio" name="exercise" value="2">通学だけ</label>
-      <label><input type="radio" name="exercise" value="3">軽く走った</label>
-      <label><input type="radio" name="exercise" value="4">しっかりした</label>
-      <label><input type="radio" name="exercise" value="5">かなりした</label>
+      <p>Question 2<br>How much did you exercise today?</p>
+      <label><input type="radio" name="exercise" value="1" required>I did not go outside</label>
+      <label><input type="radio" name="exercise" value="2">Only commuting</label>
+      <label><input type="radio" name="exercise" value="3">Light exercise</label>
+      <label><input type="radio" name="exercise" value="4">A solid workout</label>
+      <label><input type="radio" name="exercise" value="5">A lot of exercise</label>
 
-      <p>質問3<br>今日の食事はどうでしたか？</p>
-      <label><input type="radio" name="meal" value="1" required>ほとんど食べていない</label>
-      <label><input type="radio" name="meal" value="2">1食だけ</label>
-      <label><input type="radio" name="meal" value="3">2食</label>
-      <label><input type="radio" name="meal" value="4">3食だがバランス悪い</label>
-      <label><input type="radio" name="meal" value="5">3食バランス良く</label>
+      <p>Question 3<br>How were your meals today?</p>
+      <label><input type="radio" name="meal" value="1" required>I barely ate</label>
+      <label><input type="radio" name="meal" value="2">Only one meal</label>
+      <label><input type="radio" name="meal" value="3">Two meals</label>
+      <label><input type="radio" name="meal" value="4">Three meals, but not balanced</label>
+      <label><input type="radio" name="meal" value="5">Three balanced meals</label>
 
-      <p>質問4<br>今日の体調は？</p>
-      <label><input type="radio" name="condition" value="1" required>とても悪い</label>
-      <label><input type="radio" name="condition" value="2">悪い</label>
-      <label><input type="radio" name="condition" value="3">普通</label>
-      <label><input type="radio" name="condition" value="4">良い</label>
-      <label><input type="radio" name="condition" value="5">とても良い</label>
+      <p>Question 4<br>How was your physical condition today?</p>
+      <label><input type="radio" name="condition" value="1" required>Very poor</label>
+      <label><input type="radio" name="condition" value="2">Poor</label>
+      <label><input type="radio" name="condition" value="3">Average</label>
+      <label><input type="radio" name="condition" value="4">Good</label>
+      <label><input type="radio" name="condition" value="5">Very good</label>
 
-      <p>質問5<br>今日の気分はどうでしたか？</p>
-      <label><input type="radio" name="mood" value="1" required>とても悪い</label>
-      <label><input type="radio" name="mood" value="2">悪い</label>
-      <label><input type="radio" name="mood" value="3">普通</label>
-      <label><input type="radio" name="mood" value="4">良い</label>
-      <label><input type="radio" name="mood" value="5">とても良い</label>
+      <p>Question 5<br>How was your mood today?</p>
+      <label><input type="radio" name="mood" value="1" required>Very poor</label>
+      <label><input type="radio" name="mood" value="2">Poor</label>
+      <label><input type="radio" name="mood" value="3">Average</label>
+      <label><input type="radio" name="mood" value="4">Good</label>
+      <label><input type="radio" name="mood" value="5">Very good</label>
 
-      <p>質問6<br>今日は規則正しい生活ができましたか？</p>
-      <label><input type="radio" name="routine" value="1" required>全くできていない</label>
-      <label><input type="radio" name="routine" value="2">あまりできていない</label>
-      <label><input type="radio" name="routine" value="3">普通</label>
-      <label><input type="radio" name="routine" value="4">だいたいできた</label>
-      <label><input type="radio" name="routine" value="5">しっかりできた</label>
+      <p>Question 6<br>Did you keep a regular daily routine today?</p>
+      <label><input type="radio" name="routine" value="1" required>Not at all</label>
+      <label><input type="radio" name="routine" value="2">Not very well</label>
+      <label><input type="radio" name="routine" value="3">Average</label>
+      <label><input type="radio" name="routine" value="4">Mostly yes</label>
+      <label><input type="radio" name="routine" value="5">Yes, very well</label>
 
-      <p>質問7<br>今日は集中して作業できましたか？</p>
-      <label><input type="radio" name="focus" value="1" required>全くできていない</label>
-      <label><input type="radio" name="focus" value="2">あまりできていない</label>
-      <label><input type="radio" name="focus" value="3">普通</label>
-      <label><input type="radio" name="focus" value="4">だいたいできた</label>
-      <label><input type="radio" name="focus" value="5">しっかりできた</label>
+      <p>Question 7<br>Were you able to focus on your work today?</p>
+      <label><input type="radio" name="focus" value="1" required>Not at all</label>
+      <label><input type="radio" name="focus" value="2">Not very well</label>
+      <label><input type="radio" name="focus" value="3">Average</label>
+      <label><input type="radio" name="focus" value="4">Mostly yes</label>
+      <label><input type="radio" name="focus" value="5">Yes, very well</label>
 
       <p>
         <button type="submit" id="submitButton">
-          健康状態を確認する
+          Check Health Status
         </button>
       </p>
     </form>

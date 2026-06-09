@@ -16,7 +16,7 @@ app.post("/api/health-check", async (req, res) => {
   try {
     if (!process.env.OPENAI_API_KEY) {
       return res.status(500).json({
-        error: ".envにOPENAI_API_KEYが設定されていません。"
+        error: "OPENAI_API_KEY is not set in .env."
       });
     }
 
@@ -24,25 +24,25 @@ app.post("/api/health-check", async (req, res) => {
 
     if (!Array.isArray(answers) || answers.length === 0) {
       return res.status(400).json({
-        error: "回答データがありません。"
+        error: "No answer data was provided."
       });
     }
 
     const answerText = answers
       .map((answer, index) => {
-        return `${index + 1}. ${answer.question}: ${answer.answer}（${answer.score}点）`;
+        return `${index + 1}. ${answer.question}: ${answer.answer} (${answer.score} points)`;
       })
       .join("\n");
 
     const response = await client.responses.create({
       model,
       instructions: [
-        "あなたは健康チェックアプリのアドバイス係です。",
-        "医療診断や病名の断定はしないでください。",
-        "生活習慣の目安として、短く優しい日本語で返してください。",
-        "構成は「今日の健康チェック結果」「ひとことアドバイス」の2つにしてください。"
+        "You are the advice assistant for a health check app.",
+        "Do not make medical diagnoses or identify diseases.",
+        "Respond in short, kind English as lifestyle guidance only.",
+        "Use two sections: 'Today's Health Check Result' and 'One-Point Advice'."
       ].join("\n"),
-      input: `次の回答をもとに、今日の健康チェック結果を作ってください。\n\n${answerText}`
+      input: `Create today's health check result based on the following answers.\n\n${answerText}`
     });
 
     res.json({
@@ -51,11 +51,11 @@ app.post("/api/health-check", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({
-      error: "AIから結果を取得できませんでした。APIキーや利用上限を確認してください。"
+      error: "Could not get a result from AI. Please check your API key and usage limits."
     });
   }
 });
 
 app.listen(port, () => {
-  console.log(`http://localhost:${port}/front.html で起動中`);
+  console.log(`Server running at http://localhost:${port}/front.html`);
 });
