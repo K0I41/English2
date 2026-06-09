@@ -1,7 +1,7 @@
 {
   "name": "english2",
   "version": "1.0.0",
-  "description": "健康チェックアプリ",
+  "description": "Health Check App",
   "main": "server.js",
   "type": "module",
   "scripts": {
